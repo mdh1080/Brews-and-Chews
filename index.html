@@ -3,36 +3,79 @@
 <meta charset="UTF-8">
 <title>Test Page</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 <style>
 </style>
 
 <body>
-<h1>Find a Restaurant and Brewery near you!</h1>
+    <main>
+    <!--maybe put a jumbotron?-->
+    <header class="hero">
+        <h1>Brews n'Chews</h1>
+        <h2>Find a Restaurant and Brewery near you!</h2>
+        <hr>
 
-<div class="buttons">
-    <input id="searchBox" type="text" placeholder="Search.." name="search">
-    <button id="searchBtn" type="button">Search</button>
+</header>
+
+    <div class= "container">
+        <div class="row">
+            <div class="col-3">
+                <div class="buttons">
+                    <h3>Search For a City:</h3>
+                    <input id="searchBox" type="text" placeholder="City" name="search">
+                    <button id="searchBtn" type="button">Search</button>
+                </div>
+            </div>
+
+
+            <div class="col-md-5">
+                <div class="restaurant">
+                    <h3>Restaurant Info</h3>
+                     <p id="reset" class="name">This is the Name: </p>
+                    <p id="reset" class="restCity">This is the City: </p>
+                    <p id="reset" class="address">This is the Address: </p>
+                    <p id="reset" class="rating">This is the Rating: </p>
+                    <p id="reset" class="price">This is the Price: </p>
+                    <p id="reset" class="phoneNumber">This is the Phone Number: </p>
+                </div>   
+            </div>
+
+            <div class="col-md-4">
+                <div class="brewery">
+                    <h3>Brewery Info</h3>
+                     <p id="reset" class="brewName">This is the Name: </p>
+                     <p id="reset" class="city">This is the City: </p>
+                     <p id="reset" class="street">This is the Street: </p>
+                     <p id="reset" class="website">This is the Website: </p>
+                    <p id="reset" class="brewPhone">This is the Phone Number: </p>
+                </div>
+                
+            </div>
+        </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <div class="buttons">
     <input id="searchBoxTwo" type="text" placeholder="Search.." name="search">
     <button id="searchBtnTwo" type="button">Search</button>
 </div> -->
-<h2>Brewery Info</h2>
-    <p id="reset" class="brewName">This is the Name: </p>
-    <p id="reset" class="city">This is the City: </p>
-    <p id="reset" class="street">This is the Street: </p>
-    <p id="reset" class="website">This is the Website: </p>
-    <p id="reset" class="brewPhone">This is the Phone Number: </p>
 
-<h2>Restaurant Info</h2>
-    <p id="reset" class="name">This is the Name: </p>
-    <p id="reset" class="restCity">This is the City: </p>
-    <p id="reset" class="address">This is the Address: </p>
-    <p id="reset" class="rating">This is the Rating: </p>
-    <p id="reset" class="price">This is the Price: </p>
-    <p id="reset" class="phoneNumber">This is the Phone Number: </p>
 
+
+</div>
+</main>
 </body>
 <script src="logic.js"></script>
 </html>
