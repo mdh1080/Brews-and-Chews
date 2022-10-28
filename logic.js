@@ -26,11 +26,11 @@ function grabBrewery (addressLat, addressLong) {
 
 
 
-        breweryName.textContent = breweryNameTwo
-        breweryPhone.textContent = breweryPhoneTwo
-        breweryCity.textContent = breweryCityTwo
-        breweryAddress.textContent = breweryLocation
-        breweryWebsite.textContent = breweryUrl
+        breweryName.textContent = 'Name: ' + breweryNameTwo
+        breweryPhone.textContent = 'Phone: ' + breweryPhoneTwo
+        breweryCity.textContent = 'City: ' + breweryCityTwo
+        breweryAddress.textContent = 'Address: ' + breweryLocation
+        breweryWebsite.textContent = 'Website: ' + breweryUrl
 })
 }
 
@@ -59,19 +59,22 @@ function grabRestaurant (cityName) {
         var restaurantPrice = document.querySelector('.price')
         var restaurantPhone = document.querySelector('.phoneNumber')
         var restaurantRatingTwo = data.businesses[dataRandom].rating
-        restaurantRating.textContent = restaurantRatingTwo
         var restaurantNameTwo = data.businesses[dataRandom].name
-        restaurantName.textContent = restaurantNameTwo
         var restaurantPriceTwo = data.businesses[dataRandom].price
-        restaurantPrice.textContent = restaurantPriceTwo
         var restaurantCityTwo = data.businesses[dataRandom].location.city
-        restaurantCity.textContent = restaurantCityTwo
         var restaurantPhoneTwo = data.businesses[dataRandom].phone
-        restaurantPhone.textContent = restaurantPhoneTwo
         var restaurantAddressTwo = data.businesses[dataRandom].location.address1
-        restaurantAddress.textContent = restaurantAddressTwo
+
+        restaurantRating.textContent = 'Rating: ' + restaurantRatingTwo
+        restaurantName.textContent = 'Name: ' + restaurantNameTwo
+        restaurantPrice.textContent = 'Price: ' + restaurantPriceTwo
+        restaurantCity.textContent = 'City: ' + restaurantCityTwo
+        restaurantPhone.textContent = 'Phone: ' + restaurantPhoneTwo
+        restaurantAddress.textContent = 'Address: ' + restaurantAddressTwo
+
         var restaurantLat = data.businesses[dataRandom].coordinates.latitude
         var restaurantLong = data.businesses[dataRandom].coordinates.longitude
+
         var addressLatStr = restaurantLat.toString()
         var addressLongStr = restaurantLong.toString()
         grabBrewery(addressLatStr, addressLongStr)
