@@ -4,6 +4,8 @@ var addressLong = ""
 
 //function to fetch first api (brewery)
 function grabBrewery (addressLat, addressLong) {
+
+
     var url = `https://api.openbrewerydb.org/breweries?by_dist=${addressLat},${addressLong}&per_page=3`
     fetch(url)
     .then(response => response.json())
@@ -16,13 +18,17 @@ function grabBrewery (addressLat, addressLong) {
         var breweryLocation = data[0].street
         var breweryUrl = data[0].website_url
         var breweryCityTwo = data[0].city
-        var breweryNameTwo = data[0].id
+        var breweryNameTwo = data[0].name
         var breweryPhoneTwo = data[0].phone
-        breweryName.textContent += breweryNameTwo
-        breweryPhone.textContent += breweryPhoneTwo
-        breweryCity.textContent += breweryCityTwo
-        breweryAddress.textContent += breweryLocation
-        breweryWebsite.textContent += breweryUrl
+
+
+
+
+        breweryName.textContent = breweryNameTwo
+        breweryPhone.textContent = breweryPhoneTwo
+        breweryCity.textContent = breweryCityTwo
+        breweryAddress.textContent = breweryLocation
+        breweryWebsite.textContent = breweryUrl
 })
 }
 
@@ -31,6 +37,7 @@ var searchButton = document.querySelector("#searchBtn")
 searchButton.addEventListener('click', function() {
     var searchText = document.querySelector("#searchBox")
     var cityName = searchText.value
+   
     grabRestaurant(cityName)
 })
 
@@ -49,17 +56,17 @@ function grabRestaurant (cityName) {
         var restaurantPrice = document.querySelector('.price')
         var restaurantPhone = document.querySelector('.phoneNumber')
         var restaurantRatingTwo = data.businesses[0].rating
-        restaurantRating.textContent += restaurantRatingTwo
-        var restaurantNameTwo = data.businesses[0].alias
-        restaurantName.textContent += restaurantNameTwo
+        restaurantRating.textContent = restaurantRatingTwo
+        var restaurantNameTwo = data.businesses[0].name
+        restaurantName.textContent = restaurantNameTwo
         var restaurantPriceTwo = data.businesses[0].price
-        restaurantPrice.textContent += restaurantPriceTwo
+        restaurantPrice.textContent = restaurantPriceTwo
         var restaurantCityTwo = data.businesses[0].location.city
-        restaurantCity.textContent += restaurantCityTwo
+        restaurantCity.textContent = restaurantCityTwo
         var restaurantPhoneTwo = data.businesses[0].phone
-        restaurantPhone.textContent += restaurantPhoneTwo
+        restaurantPhone.textContent = restaurantPhoneTwo
         var restaurantAddressTwo = data.businesses[0].location.address1
-        restaurantAddress.textContent += restaurantAddressTwo
+        restaurantAddress.textContent = restaurantAddressTwo
         var restaurantLat = data.businesses[0].coordinates.latitude
         var restaurantLong = data.businesses[0].coordinates.longitude
         var addressLatStr = restaurantLat.toString()
@@ -67,3 +74,4 @@ function grabRestaurant (cityName) {
         grabBrewery(addressLatStr, addressLongStr)
 })
 }
+
