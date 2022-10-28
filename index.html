@@ -15,43 +15,51 @@
         <h1>Brews n'Chews</h1>
         <h2>Find a Restaurant and Brewery near you!</h2>
         <hr>
-
+        <div class="hero-image"></div>
 </header>
 
     <div class= "container">
         <div class="row">
             <div class="col-3">
-                <div class="buttons">
-                    <h3>Search For a City:</h3>
+                <div class="buttons card-body">
+                    <h3 class="card-title">Search For a City:</h3>
                     <input id="searchBox" type="text" placeholder="City" name="search">
                     <button id="searchBtn" type="button">Search</button>
                 </div>
             </div>
 
-
-            <div class="col-md-5">
-                <div class="restaurant">
-                    <h3>Restaurant Info</h3>
-                     <p id="reset" class="name">This is the Name: </p>
-                    <p id="reset" class="restCity">This is the City: </p>
-                    <p id="reset" class="address">This is the Address: </p>
-                    <p id="reset" class="rating">This is the Rating: </p>
-                    <p id="reset" class="price">This is the Price: </p>
-                    <p id="reset" class="phoneNumber">This is the Phone Number: </p>
-                </div>   
-            </div>
-
             <div class="col-md-4">
-                <div class="brewery">
-                    <h3>Brewery Info</h3>
-                     <p id="reset" class="brewName">This is the Name: </p>
-                     <p id="reset" class="city">This is the City: </p>
-                     <p id="reset" class="street">This is the Street: </p>
-                     <p id="reset" class="website">This is the Website: </p>
-                    <p id="reset" class="brewPhone">This is the Phone Number: </p>
+                <div class="brewery card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h3 class="card-title">Brewery Info</h3>
+                    </div>
+                    <ul class="list-group list-group-flush"></ul>
+                     <li id="reset" class="list-group-item brewName">Name: </li>
+                     <li id="reset" class="list-group-item city">City: </li>
+                     <li id="reset" class="list-group-item street">Address: </li>
+                     <li id="reset" class="list-group-item website">Website: </li>
+                    <li id="reset" class="list-group-item brewPhone">Phone Number: </li>
+                    </ul>
                 </div>
                 
             </div>
+
+            <div class="col-md-5">
+                <div class="restaurant card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h3 class="card-title">Restaurant Info</h3>
+                    </div>
+                    <ul class="list-group list-group-flush"></ul>
+                     <li id="reset" class="list-group-item name">Name: </li>
+                    <li id="reset" class="list-group-item restCity">City: </li>
+                    <li id="reset" class="list-group-item address">Address: </li>
+                    <li id="reset" class="list-group-item rating">Rating: </li>
+                    <li id="reset" class="list-group-item price">Price: </li>
+                    <li id="reset" class="list-group-item phoneNumber">Phone Number: </li>
+                    </ul>
+                    </div>
+                    </div>
+            
         </div>
 </div>
 
