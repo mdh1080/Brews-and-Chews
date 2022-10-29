@@ -1,10 +1,16 @@
 * {
-    font-family: "Fantasy", sans-serif, Times;
+    font-family: "Arial", sans-serif, Times;
 }
 
-.container{
+header {
+    background-image: url("https://img.freepik.com/premium-photo/wood-background-texture_124507-6931.jpg?w=2000");
+    background-size: cover;
+    padding: 10px;
+}
 
-
+.content {
+    background-image: url("https://images.unsplash.com/photo-1566232678114-4735db83e8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2373&q=80");
+    padding: 100px 0px;
 
 }
 .hero{
@@ -12,9 +18,7 @@
 }
 
 .hero-image{
-    height: 200px;
-    width: auto;
-    margin-bottom: 25px;
+    height: 150px;
     background-image: url("http://rmcigarfestival.com/wp-content/uploads/2012/03/Beer-Banner.jpg");
     background-size: cover;
     background-position: center;
@@ -22,14 +26,38 @@
 
 h1,h2{
     text-align:center;
-
+    margin: 0px;
+    padding: 10px;
+    color: wheat;
 }
 .row{
-    margin-left: -10em;
+   
 }
 
 .buttons,
 .resturant,
 .brewery{
+    
 
+}
+
+.btn{
+    padding-top: 10px;
+}
+
+footer {
+    background-image: url("https://img.freepik.com/premium-photo/wood-background-texture_124507-6931.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    color: wheat;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+
+}
+
+footer p {
+    margin: 0px;
+    padding-top: 10px;
 }
