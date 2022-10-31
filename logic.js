@@ -22,7 +22,7 @@ function grabBrewery (addressLat, addressLong) {
         var breweryCityTwo = data[dataRandom].city
         var breweryNameTwo = data[dataRandom].name
         var breweryPhoneTwo = data[dataRandom].phone
-
+        breweryPhoneTwo = numberformat(breweryPhoneTwo)
 
 
 
@@ -33,6 +33,31 @@ function grabBrewery (addressLat, addressLong) {
         breweryWebsite.textContent = 'Website: ' + breweryUrl
 })
 }
+
+// function for phone number 
+function numberformat (number) {
+   number = String(number)
+   var number_string = [...number]
+   var sorted = []
+    if (number_string[0] === "+" && number_string.length === 12) {
+        sorted = number_string.slice(2)
+        sorted.splice(3, 0, "-")
+        sorted.splice(7, 0, "-")
+    }
+    if (number_string[0] === "1" && number_string.length === 11) {
+        sorted = number_string.slice(1, 11)
+        sorted.splice(3, 0, "-")
+        sorted.splice(7, 0, "-")
+    }
+    if (number_string.length === 10) {
+        sorted = [...number_string]
+        sorted.splice(3, 0, "-")
+        sorted.splice(7, 0, "-")  
+    }
+    var final_number = sorted.join("")
+    return final_number
+}
+
 
 //button function
 var searchButton = document.querySelector("#searchBtn")
@@ -64,6 +89,7 @@ function grabRestaurant (cityName) {
         var restaurantCityTwo = data.businesses[dataRandom].location.city
         var restaurantPhoneTwo = data.businesses[dataRandom].phone
         var restaurantAddressTwo = data.businesses[dataRandom].location.address1
+        restaurantPhoneTwo = numberformat(restaurantPhoneTwo)
 
         restaurantRating.textContent = 'Rating: ' + restaurantRatingTwo
         restaurantName.textContent = 'Name: ' + restaurantNameTwo
