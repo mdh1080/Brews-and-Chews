@@ -14,14 +14,12 @@ function grabBrewery (addressLat, addressLong) {
     .then(response => response.json())
     .then(data => {console.log(data)
         var dataRandom = x[Math.floor(Math.random()*x.length)]
-        var breweryCity = document.querySelector('.city')
         var breweryAddress = document.querySelector('.street')
         var breweryWebsite = document.querySelector('.website')
         var breweryName = document.querySelector('.brewName')
         var breweryPhone = document.querySelector('.brewPhone')
         var breweryLocation = data[dataRandom].street
         var breweryUrl = data[dataRandom].website_url
-        var breweryCityTwo = data[dataRandom].city
         var breweryNameTwo = data[dataRandom].name
         var breweryPhoneTwo = data[dataRandom].phone
         breweryPhoneTwo = numberformat(breweryPhoneTwo)
@@ -30,7 +28,6 @@ function grabBrewery (addressLat, addressLong) {
 
         breweryName.textContent = 'Name: ' + breweryNameTwo
         breweryPhone.textContent = 'Phone: ' + breweryPhoneTwo
-        breweryCity.textContent = 'City: ' + breweryCityTwo
         breweryAddress.textContent = 'Address: ' + breweryLocation
         breweryWebsite.textContent = 'Website: ' + breweryUrl
 })
@@ -80,23 +77,17 @@ function grabRestaurant (cityName) {
     .then(data => {console.log(data)
         var dataRandom = x[Math.floor(Math.random()*x.length)]
         var restaurantName = document.querySelector('.name')
-        var restaurantCity = document.querySelector('.restCity')
         var restaurantAddress = document.querySelector('.address')
-        var restaurantRating = document.querySelector('.rating')
         var restaurantPrice = document.querySelector('.price')
         var restaurantPhone = document.querySelector('.phoneNumber')
-        var restaurantRatingTwo = data.businesses[dataRandom].rating
         var restaurantNameTwo = data.businesses[dataRandom].name
         var restaurantPriceTwo = data.businesses[dataRandom].price
-        var restaurantCityTwo = data.businesses[dataRandom].location.city
         var restaurantPhoneTwo = data.businesses[dataRandom].phone
         var restaurantAddressTwo = data.businesses[dataRandom].location.address1
         restaurantPhoneTwo = numberformat(restaurantPhoneTwo)
 
-        restaurantRating.textContent = 'Rating: ' + restaurantRatingTwo
         restaurantName.textContent = 'Name: ' + restaurantNameTwo
         restaurantPrice.textContent = 'Price: ' + restaurantPriceTwo
-        restaurantCity.textContent = 'City: ' + restaurantCityTwo
         restaurantPhone.textContent = 'Phone: ' + restaurantPhoneTwo
         restaurantAddress.textContent = 'Address: ' + restaurantAddressTwo
 
