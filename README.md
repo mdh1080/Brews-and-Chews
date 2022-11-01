@@ -4,6 +4,9 @@
 We created a web application to find a brewery and restaurant within the same city. Breweries are a poplular destination when traveling and this allows the user to easily find a location based on the city they are in. Many breweries don't serve meals, so we added a restaurant locator to find restaurants within a short distance of the brewery. Two API's were used in creating this application. The brewery and restaurant are chosen randomly and are not based on the API's first result. 
 
 ## Usage
+
+Due to issues with Yelp's authentication process, the first screen you will see upon opening the app is an authorization page for Heroku. Click the "Request temporary access to the demo server" button, you should get a message "You currently have temporary access to the demo server" You can now switch back to the Brews and Chews app page.
+
 Enter city in the search box that you would like to find a brewery and restaurant for. If you would like more options for the brewery or restaurant, search the city again and it will show different results. 
 
 Link for website: https://mdh1080.github.io/Brews-and-Chews/
