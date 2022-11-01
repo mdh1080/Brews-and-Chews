@@ -2,6 +2,8 @@ var apiKey = "8T96biN_soJ158_Zo0WNfmegfEY7wDZOcI9jZ6XrJ96KGP5kc0r8CKFyfFvPth6Mku
 var addressLat = ""
 var addressLong = ""
 var x = [0,1,2,3,4]
+var searchHistory = []
+searchHistory = JSON.parse(localStorage.getItem('cities')) ? JSON.parse(localStorage.getItem('cities')): []
 
 //function to fetch first api (brewery)
 function grabBrewery (addressLat, addressLong) {
@@ -104,6 +106,10 @@ function grabRestaurant (cityName) {
         var addressLatStr = restaurantLat.toString()
         var addressLongStr = restaurantLong.toString()
         grabBrewery(addressLatStr, addressLongStr)
+
+        //stringify cityName
+        searchHistory.push(cityName)
+        localStorage.setItem('cities', JSON.stringify(searchHistory))
+        console.log(searchHistory)
 })
 }
-
